@@ -1,4 +1,4 @@
-import express from 'express'
+const express = require("express")
 
 
 const app = express();
@@ -12,23 +12,23 @@ app.set('views', 'views')
 app.use(express.static('public'));
 
 // //Get route file 
-// export const getRouter = express.Router();
+const getRouter =require ('./routes/posts');
 
-// // Tell express to use posts.js file for the routes 
-// app.use('/' , getRouter)
+// Tell express to use posts.js file for the routes 
+app.use('/', getRouter)
 
-//creating the homepage
-app.get('/' , (req, res) =>{
-	res.render('index')
+// //creating the homepage
+// app.get('/' , (req, res) =>{
+// 	res.render('index')
 
-})
+// })
 
-// create the aboutpage
+// // create the aboutpage
 
-app.get('/about', (req, res) =>{
-	res.render('aboutpage')
+// app.get('/about', (req, res) =>{
+// 	res.render('aboutpage')
 
-})
+// })
 
 
 
