@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head");%>
+</head>
+
+<header>
+    <%- include("./partials/header");%>
+</header>
+
+
+<body>
+
+    <main>
+        <section class="overview-page">
+            <h1>BOOK OF ROMANS</h1>
+            <h5>Chapter 1</h5>
+            <div class="verses-container">
+
+                <% verses.forEach(function(verse) { %>
+                <div>
+                    <a href="/verse/<%- verse.book_name %> <%- verse.chapter %>:<%- verse.verse %>">
+                        <h6><%- verse.verse %></h6>
+                    </a>
+                </div>
+                <% }) %>
+            </div>
+
+        </section>
+
+    </main>
+</body>
+
+
+</html>

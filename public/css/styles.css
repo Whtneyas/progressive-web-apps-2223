@@ -2,6 +2,7 @@ body {
     background-color: white;
     background-color: var(--background-color-main);
     height: 100%;
+    margin: 0;
     font-family: 'Athiti', sans-serif;
 
 
@@ -183,16 +184,6 @@ button:disabled {
 
 }
 
-/* 
-
-.container-about{
-    display: grid;
-    justify-content: center;
-    place-content: center;
-    gap: 1em;
-    background-color: var(--background-color-main);
-    color: black;
-} */
 
 
 h4 {
@@ -238,6 +229,54 @@ h4 {
     font-size: 1.5rem;
 }
 
+h5{
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+h6 {
+    font-size: 1rem ;
+}
+
+.overview-page{
+    margin-bottom: 5em;
+
+}
+
+
+.verses-container {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 1em;
+    text-decoration: none;
+    min-height: 100%;
+    
+ 
+
+  
+  }
+
+
+  .verses-container > div{
+    background-color: white;
+    border-radius:.5em;
+ 
+  }
+
+  
+  .verses-container a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+   
+
+    
+  }
+  
+
 
 
 
@@ -278,6 +317,11 @@ h4 {
     .container-about article:hover {
         border: 2px solid var(--border-color);
         box-shadow: 1px 2px 7px black;
+    }
+
+
+    .verses-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 
 }
