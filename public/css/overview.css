@@ -22,9 +22,7 @@ body {
     --heading-chapter-text-color: #B30E08;
 
 }
-
-
-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+body{
+    background-color: green;
 }
+

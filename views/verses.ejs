@@ -16,22 +16,26 @@
 
 
 
-        <section id="content">
+        <section class="all-verses">
             <!--SECOND PAGE - PAGES -->
-            <article>
-                <% verses.forEach(function(verse) { %>
-                <article>
-                    <h2><%- verse.book_name %></h2>
-                    <span><%- verse.chapter %> </span>
-                    <h3><%- verse.verse %></h3>
-                    <p><%- verse.text %></p>
 
+            <% verses.forEach(function(verse) { %>
+            <article>
+                <article>
+                    <div>
+                        <h2><%- verse.book_name %></h2>
+                        <span><%- verse.chapter %> </span>
+                        <h3><%- verse.verse %></h3>
+                    </div>
+                    <p><%- verse.text %></p>
                 </article>
-                <% }) %>
             </article>
+            <% }) %>
+
 
         </section>
     </main>
+    <%- include("./partials/register.ejs");%>
 </body>
 
 

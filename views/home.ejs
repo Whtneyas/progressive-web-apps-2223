@@ -15,20 +15,22 @@
     <main>
         <section class="overview-page">
             <h1>BOOK OF ROMANS</h1>
-            <h5>Chapter 1</h5>
+              <h5> Chapter1 </h5>
             <div class="verses-container">
+
                 <% verses.forEach(function(verse) { %>
-                <div>
-                    <a href="/verse/<%- verse.book_name %> <%- verse.chapter %>:<%- verse.verse %>">
-                        <h6><%- verse.verse %></h6>
-                    </a>
-                </div>
+
+                <a href="/verse/<%- verse.book_name %> <%- verse.chapter %>:<%- verse.verse %>">
+                    <h6><%- verse.verse %></h6>
+                </a>
+
                 <% }) %>
             </div>
 
         </section>
 
     </main>
+    <%- include("./partials/register.ejs");%>
 </body>
 
 
