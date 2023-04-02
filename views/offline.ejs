@@ -6,14 +6,16 @@
 
 
 <body>
-    eader>
-    <%- include("./partials/header");%>
-</header>
+   
     <main>
-        <section>
-            <h2>You are offline </h2>
+        <section class="offline-page">
+            <h2>Opps ! You are offline.</h2> 
+            <img src="" alt="">
+            <p>Unfortunately, you are currentlu offline</p>
+            <a href="/">Go to home page</a>
         </section>
     </main>
 
-    <%- include("./partials/register.ejs");
+    <%- include("./partials/register.ejs")%>;
 </body>
+
