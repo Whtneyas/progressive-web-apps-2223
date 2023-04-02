@@ -3,7 +3,6 @@ const assets = [
     '/',
     '/offline',
     '/css/styles.css',
-    '/css/overview.css',
     'https://fonts.googleapis.com/css2?family=Athiti:wght@300;400&family=Tilt+Prism&display=swap'
 ]
 
@@ -16,8 +15,9 @@ self.addEventListener('install', evt => {
             cache.addAll(assets);
         })
     );
-    console/log(assets)
+   
 });
+
 //activate service worker
 self.addEventListener('activate', evt => {
     // console.log('service worker has been activated');

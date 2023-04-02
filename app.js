@@ -82,6 +82,13 @@ app.get('/about', (req, res) => {
 	})
 })
 
+//offline page 
+app.get('/offline', (req, res) => {
+	res.render('offline', {
+		title: 'Offline'
+	})
+})
+
 
 
 app.listen(port, () => {
