@@ -1,11 +1,11 @@
 {
+    "name": "Book of Romans",
+    "short_name": "Romans",
     "theme_color": " #808080",
     "background_color": " #808080",
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "Book of Romans",
-    "short_name": "Romans",
     "description": "A chapter of the book of romans from the bible ",
     "icons": [
         {
