@@ -12,8 +12,8 @@
     "request": "^2.88.2"
   },
   "scripts": {
-    "dev": "nodemon app.js",
-     "start" : "node app.js"
+    "dev": "nodemon",
+    "start" : "node app.js"
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
