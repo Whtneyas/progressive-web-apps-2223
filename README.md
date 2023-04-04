@@ -32,9 +32,16 @@
         
 ### Staring the server
 
+
+
 4.  Start the server by running 
 
         npm run dev 
 
+### Licencse  
+This project is licenced  under rhte MIT license  - see the license for more details
+
+
+### Resources
 
  
