@@ -43,9 +43,7 @@ This project is licenced  under rhte MIT license  - see the license for more det
 
 
 ### DEMO
-
-https://railway.app/project/ff979a35-d081-48a0-a574-fdcb05354b29/service/13f53ff8-2b97-4c27-8e33-bb9e98a7f7c5
-
+https://progressive-web-apps-2223-production-9fcb.up.railway.app/
 
 
 
