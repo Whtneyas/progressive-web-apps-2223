@@ -1,8 +1,8 @@
 {
     "name": "Book of Romans",
     "short_name": "Romans",
-    "theme_color": " #808080",
-    "background_color": " #808080",
+    "theme_color": "#ff8ba7",
+    "background_color": "#ff8ba7",
     "display": "standalone",
     "scope": "/",
     "start_url": "/",

@@ -1,15 +1,32 @@
 const express = require("express")
 const app = express();
 const request = require('request');
+let options = { maxAge: '2y' }
+const minifyHTML = require('express-minify-html');
 
 const port = process.env.PORT || 3000;
 
-//Sets the app to use the handlebars engine
+//Sets the app to use ejs engine
 app.set('view engine', 'ejs');
 
 app.set('views', 'views')
 
 app.use(express.static('public'));
+
+app.use(express.static('public', options))
+
+app.use(minifyHTML({
+    override: true,
+    exception_url: false,
+    htmlMinifier: {
+        removeComments: true,
+        collapseWhitespace: true,
+        collapseBooleanAttributes: true,
+        removeAttributeQuotes: true,
+        removeEmptyAttributes: true,
+        minifyJS: true
+    }
+}));
 
 // Home page
 app.get('/', (req, res) => {

@@ -30,7 +30,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--background-color);
+    background-color: var(--header-color);
 }
 
 header nav {
@@ -81,13 +81,10 @@ main {
 }
 
 
-
-
 /**Pages ****/
 section:nth-of-type(1) {
     padding: 1em;
     margin-bottom: 10em;
-
 }
 
 
@@ -98,6 +95,15 @@ h1 {
     text-decoration: overline;
     color: var(--heading-color);
     display: block;
+    
+}
+
+.chapter-title {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+    color: #594a4e;
 }
 
 
@@ -201,14 +207,6 @@ h4 {
     font-size: 1rem;
 }
 
-h5 {
-    text-align: center;
-    font-size: 1.2rem;
-    padding: 0;
-    margin: 0;
-    color: #594a4e;
-
-}
 
 h6 {
     font-size: 1rem;
@@ -299,26 +297,24 @@ article>div {
 
 }
 
-.offline-page{
-    display:flex;
+.offline-page {
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 }
-    
-.offline-page > a {
-    background-color:#ffc6c7 ;
+
+.offline-page>a {
+    background-color: #ffc6c7;
     text-decoration: none;
     color: #33272a;
     padding: .6em;
     border-radius: .6em;
 }
 
-.offline-page > img {
- 
-}
+.offline-page>img {}
 
-.offline-page > a:hover{
+.offline-page>a:hover {
     background-color: #ff8ba7;
 }
 

@@ -3,21 +3,26 @@
   "private": true,
   "version": "0.0.0",
   "main": "app.js",
+
+  
   "dependencies": {
+    "all": "^0.0.0",
     "axios": "^1.3.4",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-handlebars": "^7.0.2",
+    "express-minify-html": "^0.12.0",
     "node-fetch": "^3.3.1",
     "nodemon": "^2.0.21",
     "request": "^2.88.2"
   },
   "scripts": {
     "dev": "nodemon",
-    "start" : "node app.js"
+    "start": "node app.js"
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
-    "node-dev": "^8.0.0"
+    "node-dev": "^8.0.0",
+    "uglify-js": "^3.17.4"
   }
 }
