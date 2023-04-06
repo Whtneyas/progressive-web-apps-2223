@@ -1,6 +1,8 @@
 const express = require("express")
 const app = express();
 const request = require('request');
+const compression = require('compression');
+
 let options = { maxAge: '2y' }
 const minifyHTML = require('express-minify-html');
 
@@ -14,6 +16,8 @@ app.set('views', 'views')
 app.use(express.static('public'));
 
 app.use(express.static('public', options))
+
+app.use(compression());
 
 app.use(minifyHTML({
     override: true,
