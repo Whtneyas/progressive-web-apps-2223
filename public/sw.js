@@ -1,5 +1,5 @@
-const staticCacheName = 'site-static-v7';
-const dynamicCache = 'site-dynamic-v7'
+const staticCacheName = 'site-static-v8';
+const dynamicCache = 'site-dynamic-v8'
 const assets = [
     '/',
     '/offline',
@@ -10,7 +10,6 @@ const assets = [
 
 //install service worker 
 self.addEventListener('install', evt => {
-    self.skipWaiting();
     evt.waitUntil(
         caches.open(staticCacheName)
         .then(cache => {
@@ -40,7 +39,7 @@ self.addEventListener('activate', evt => {
     )
 });
 
-//fetch events
+
 self.addEventListener('fetch', evt => {
     // console.log('fetch event', evt)
     evt.respondWith(
@@ -53,15 +52,37 @@ self.addEventListener('fetch', evt => {
                     return fetchRes;
                 })
             });
-        }).catch(() =>{
+        }).catch(()=>{
             if (evt.request.headers.get('accept').includes('text/html')) {
                 return caches.match('/offline')
             }
-           
+
         })
        );
-    
+
         console.log('fetch event', evt);
     });
 
-    
+
+// self.addEventListener("fetch", (e) => {
+// console.log("[Service Worker] Fetching...")
+// e.respondWith(
+// caches.match(e.request)
+// .then(cachedResponse => {
+// if (cachedResponse) return cachedResponse
+// return fetch(e.request)
+// .then(response => {
+// if (e.request.method !== 'GET' || e.request.url.indexOf('http') !== 0) return response
+// return caches.open(dynamicCache)
+// .then(cache => {
+// cache.put(e.request, response.clone())
+// return response
+// })
+// })
+// })
+// .catch(() => caches.open(dynamicCache).then(cache => cache.match('/offline'))
+// )
+// )
+// })
+
+
